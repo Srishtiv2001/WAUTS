@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Noto+Serif:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto&family=Roboto+Mono:wght@400;500&family=Roboto+Slab&display=swap');
+
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url('C:/Users/srish/WAUTS/static/img/desk4.jpg') !important; */
+  background-image: url('../img/desk4.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  padding-right: 5%;
+  padding-left: 20%;
+  font-family: 'Roboto Mono', monospace;
+  font: "Roboto Mono";
+  color: white;
+  font-size: large;
+  font-weight: 400;
+}
+.container{
+  width: 80%;
+  height: 100%;
+  padding-top:3%;
+  padding-left: 4%;
+  padding-bottom: 3%;
+  padding-right: 5%;
+}
+.container-heading
+{
+    font-family: "Limelight";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 200%;
+    color: white !important;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3%;
+    position:relative;
+}
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: rgb(0, 156, 204);
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+}
+
+.tabset > input:checked + label {
+  border-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+/*
+ Demo purposes only
+*/
+
+
+.tabset {
+  max-width: 65em;
+}
+
+h2
+{
+  font-family: 'Roboto Mono', monospace;
+  font: "Roboto Mono";
+  font-weight: 200;
+  margin-left: 10px;
+}
+table {
+  width: 100%;
+}
+button
+{
+    font-family: "Roboto mono";
+    font-weight: 400;
+    font-size:small;
+    text-align: center;
+    padding: 10px 10px;
+    /* margin-top: 10px; */
+    vertical-align:middle;
+    color: #ffffff;
+    background: black;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    /* outline-color: #000000; */
+}
+button:hover
+{
+  font-family: "Roboto mono";
+  font-weight: 400;
+  font-size:small;
+  text-align: center;
+  padding: 10px 10px;
+  /* margin-top: 10px; */
+  vertical-align:middle;
+  color: black;
+  text-shadow: black;
+  background: #ffffff;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+.scrollbar
+{
+  overflow: auto;
+  height:220px;
+  overflow-x: hidden; 
+
+}
+.scrolling
+{
+ 
+  min-height: 90px;
+}
+
+#style-2::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: none;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: none;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}

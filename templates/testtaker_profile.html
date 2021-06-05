@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/testtaker_profile.css" type="text/css">
+    <title>Document</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+</style>
+<script>
+function rangeSlide1(value) {
+    document.getElementById('rangeValue1').innerHTML = value;
+}
+function rangeSlide2(value) {
+    document.getElementById('rangeValue2').innerHTML = value;
+}
+</script>
+<body>
+    <div class="container">
+    <h1>Complete your Profile</h1>
+    <form class='form' method='post' action='/comp_profile'>
+        <div class=scrollbar id=style-2>
+            <div class="scrolling"><br>
+        <label>Name : </label>
+        <input type="text" class="taker-input" name="name" placeholder="Eg. John Doe"></input><br><br>
+        <label>Age : </label>
+        <div class="slidecontainer">
+            <span id="rangeValue1">50</span>
+            <input name="age" type="range" min="18" max="100" class="slider" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)" >
+        </div><br>
+        <label>Email :</label>
+        <input type="email" class="taker-input" name="email" value={{mail}}></input><br><br>
+        <label>Password : </label>
+        <input type="password" class="taker-input" name="password"></input><br><br>
+        <label>Income : </label>
+        <div class="slidecontainer">
+            <span id="rangeValue2">50</span>k
+            <input name="income" type="range" min="1" max="65" class="slider" onChange="rangeSlide2(this.value)" onmousemove="rangeSlide2(this.value)" >
+        </div><br>
+        <label>Gender : </label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>   <br><br>
+        <label>Country : </label><br>
+        <input type="radio" id="us" name="country" value="us">
+        <label>United States</label><br>
+        <input type="radio" id="uk" name="country" value="uk">
+        <label>United Kingdom</label><br>
+        <input type="radio" id="can" name="country" value="can">
+        <label>Canada</label><br>
+        <input type="radio" id="aus" name="country" value="aus">
+        <label>Australia</label><br>
+        <input type="radio" id="ind" name="country" value="ind">
+        <label>India</label><br>
+        <input type="radio" id="rest" name="country" value="rest">
+        <label>Rest of World</label><br><br>
+        <label>Web Expertise : </label><br>
+        <input type="radio" id="average" name="web_expertise" value="average">
+        <label for="average">Average web user</label>
+        <input type="radio" id="advanced" name="web_expertise" value="advanced">
+        <label for="advanced">Advanced web user</label><br><br>
+        <label>Employment Status : </label><br>
+        <input type="radio" id="empstat1" name="empstat" value="empstat1">
+        <label for="empstat1"> Employed full-time (30 or more hours per week)</label><br>
+        <input type="radio" id="empstat2" name="empstat" value="empstat2">
+        <label for="empstat5"> Employed part-time (Under 30 hours per week)</label><br>
+        <input type="radio" id="empstat3" name="empstat" value="empstat3">
+        <label for="empstat2"> Self-employed</label><br>
+        <input type="radio" id="empstat4" name="empstat" value="empstat4">
+        <label for="empstat6"> Homemaker/stay-at-home parent</label><br>
+        <input type="radio" id="empstat5" name="empstat" value="empstat5">
+        <label for="empstat3"> Full Time Student</label><br>
+        <input type="radio" id="empstat6" name="empstat" value="empstat6">
+        <label for="empstat4"> Unable to work/disabled</label>   <br>
+        <input type="radio" id="empstat7" name="empstat" value="empstat7">
+        <label for="empstat7"> Retired</label><br>
+        <input type="radio" id="empstat8" name="empstat" value="empstat8">
+        <label for="empstat8"> Not employed, looking for work</label><br><br>
+        <label>Industry</label><br>
+        <input type="radio" id="indus1" name="indus" value="indus1">
+        <label for="indus1">Advertising/Marketing/PR</label><br>
+        <input type="radio" id="indus2" name="indus" value="indus2">
+        <label for="indus2">Airlines, Aerospace and Defense</label><br>
+        <input type="radio" id="indus3" name="indus" value="indus3">
+        <label for="indus3">Arts and Design</label><br>
+        <input type="radio" id="indus4" name="indus" value="indus4">
+        <label for="indus4">Automotive</label><br>
+        <input type="radio" id="indus5" name="indus" value="indus5">
+        <label for="indus5">Broadcast Media/Publishing</label><br>
+        <input type="radio" id="indus6" name="indus" value="indus6">
+        <label for="indus6">Business Support & Logistics</label><br>
+        <input type="radio" id="indus7" name="indus" value="indus7">
+        <label for="indus7">Construction, Machinery and Homes</label><br>
+        <input type="radio" id="indus8" name="indus" value="indus8">
+        <label for="indus8">Education</label><br>
+        <input type="radio" id="indus9" name="indus" value="indus9">
+        <label for="indus9">Entertainment, Leisure and travel</label><br>
+        <input type="radio" id="indus10" name="indus" value="indus10">
+        <label for="indus10">Finance & Financial Services</label><br>
+        <input type="radio" id="indus11" name="indus" value="indus11">
+        <label for="indus11">Food & Beverages</label><br>
+        <input type="radio" id="indus12" name="indus" value="indus12">
+        <label for="indus12">Government/Legal/Public safety</label><br>
+        <input type="radio" id="indus13" name="indus" value="indus13">
+        <label for="indus13">Health Care & Pharmaceuticals</label><br>
+        <input type="radio" id="indus14" name="indus" value="indus14">
+        <label for="indus14">Insurance</label><br>
+        <input type="radio" id="indus15" name="indus" value="indus15">
+        <label for="indus15">Manufacturing</label><br>
+        <input type="radio" id="indus16" name="indus" value="indus16">
+        <label for="indus16">Nonprofit</label><br>
+        <input type="radio" id="indus17" name="indus" value="indus17">
+        <label for="indus17">Retail & Consumer Durables</label><br>
+        <input type="radio" id="indus18" name="indus" value="indus18">
+        <label for="indus18">Real Estate</label><br>
+        <input type="radio" id="indus19" name="indus" value="indus19">
+        <label for="indus19">Telecommunications, Technology, Internet and Electronics</label><br>
+        <input type="radio" id="indus20" name="indus" value="indus20">
+        <label for="indus20">Utilities, Energy, and Extraction</label><br>
+        <input type="radio" id="indus21" name="indus" value="indus21">
+        <label for="indus21">Other</label><br>    <br> 
+        <label>Company size : </label> <br>
+        <input type="radio" id="comp1" name="comp" value="comp1">
+        <label for="comp1">Small 1-50</label><br> 
+        <input type="radio" id="comp2" name="comp" value="comp2">
+        <label for="comp2">Midsize 51-1000</label><br> 
+        <input type="radio" id="comp3" name="comp" value="comp3">
+        <label for="comp3">Large 1001+</label><br> <br>
+        <label>Job Role : </label><br>
+        <input type="radio" id="job1" name="job" value="job1">
+        <label for="job1">Accounting</label><br> 
+        <input type="radio" id="job2" name="job" value="job2">
+        <label for="job2">Administrative</label><br> 
+        <input type="radio" id="job3" name="job" value="job3">
+        <label for="job3">Arts and Design</label><br>
+        <input type="radio" id="job4" name="job" value="job4">
+        <label for="job4">Business Development</label><br>
+        <input type="radio" id="job5" name="job" value="job5">
+        <label for="job5">Community & Social Services</label><br>
+        <input type="radio" id="job6" name="job" value="job6">
+        <label for="job6">Consulting</label><br>
+        <input type="radio" id="job7" name="job" value="job7">
+        <label for="job7">Education</label><br>
+        <input type="radio" id="job8" name="job" value="job8">
+        <label for="job8">Engineering</label><br>
+        <input type="radio" id="job9" name="job" value="job9">
+        <label for="job9">Entrepreneurship</label><br>
+        <input type="radio" id="job10" name="job" value="job10">
+        <label for="job10">Finance</label><br>
+        <input type="radio" id="job11" name="job" value="job11">
+        <label for="job11">Healthcare Services</label><br>
+        <input type="radio" id="job12" name="job" value="job12">
+        <label for="job12">Human Resources</label><br>
+        <input type="radio" id="job13" name="job" value="job13">
+        <label for="job13">Information Technology</label><br>
+        <input type="radio" id="job14" name="job" value="job14">
+        <label for="job14">Legal</label><br>
+        <input type="radio" id="job15" name="job" value="job15">
+        <label for="job15">Marketing</label><br>
+        <input type="radio" id="job16" name="job" value="job16">
+        <label for="job16">Media & Communications</label><br>
+        <input type="radio" id="job17" name="job" value="job17">
+        <label for="job17">Military & Protective Services</label><br>
+        <input type="radio" id="job18" name="job" value="job18">
+        <label for="job18">Operations</label><br>
+        <input type="radio" id="job19" name="job" value="job19">
+        <label for="job19">Product Management</label><br>
+        <input type="radio" id="job20" name="job" value="job20">
+        <label for="job20">Program Management</label><br>
+        <input type="radio" id="job21" name="job" value="job21">
+        <label for="job21">Purchasing</label><br>
+        <input type="radio" id="job22" name="job" value="job22">
+        <label for="job22">Quality Assurance</label><br>
+        <input type="radio" id="job23" name="job" value="job23">
+        <label for="job23">Real Estate</label><br>
+        <input type="radio" id="job24" name="job" value="job24">
+        <label for="job24">Research</label><br>
+        <input type="radio" id="job25" name="job" value="job25">
+        <label for="job25">Sales</label><br>
+        <input type="radio" id="job26" name="job" value="job26">
+        <label for="job26">Support</label><br><br>
+        <label>Job Level : </label><br>
+        <input type="radio" id="joblevel1" name="joblevel" value="joblevel1">
+        <label for="joblevel1">Entry-level</label><br>
+        <input type="radio" id="joblevel2" name="joblevel" value="joblevel2">
+        <label for="joblevel2">Senior</label><br>
+        <input type="radio" id="joblevel3" name="joblevel" value="joblevel3">
+        <label for="joblevel3">Owner</label><br>
+        <input type="radio" id="joblevel4" name="joblevel" value="joblevel4">
+        <label for="joblevel4">Manager</label><br>
+        <input type="radio" id="joblevel5" name="joblevel" value="joblevel5">
+        <label for="joblevel5">Director or above</label><br>
+        <br>
+        <label>Language</label><br>
+        <input type="radio" id="english" name="lang" value="english">
+        <label for="english">English</label><br>
+        <input type="radio" id="spanish" name="lang" value="spanish">
+        <label for="spanish">Spanish</label><br>
+        <input type="radio" id="french" name="lang" value="french">
+        <label for="french">French</label><br>
+        <input type="radio" id="german" name="lang" value="german">
+        <label for="german">German</label><br><br>
+        <label>Parental Status : </label><br>
+        <input type="radio" id="no" name="parental" value="no">
+        <label for="no">No Children</label><br>
+        <input type="radio" id="has" name="parental" value="has">
+        <label for="has">Have Children</label>   <br><br>    
+        <button style="align-items: center;" type="submit" >Complete My Profile</button>
+        </div></div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/signup.css" type="text/css">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="container">
+    <div class="container-heading">Sign Up</div>
+    <form class="form" method="post" action="/sign_up">
+        <label>First Name : </label>
+        <input type="text" class="signup-input" name="first_name" placeholder="Eg. John"></input><br>
+        <label>Last Name : </label>
+        <input type="text" class="signup-input" name="last_name" placeholder="Eg. Doe"></input><br>
+        <label>Email address : </label>
+        <input type="email" class="signup-input" name="email" placeholder="Eg. johndoe@gmail.com"></input><br>
+        <label>Password : </label>
+        <input type="password" class="signup-input" name="password"></input><br>
+        <label>Job Title : </label>
+        <input type="text" class="signup-input" name="job_title" placeholder="Eg. Product Manager, UX Researcher, CEO"></input><br>
+        <label>Company Name : </label>
+        <input type="text" class="signup-input" name="company" ></input><br>
+        <label>Phone number : </label>
+        <input type="number" class="signup-input" name="phone_number"></input><br><br>
+        <button style="align-items: center;" type="submit" >Sign Up</button>
+    </form>
+</div>
+</body>
+</html>

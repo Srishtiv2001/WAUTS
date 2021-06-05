@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/screener_test.css">
+    <title>Screener</title>
+</head>
+
+<body>
+    <div class="container">
+    <form class='form' method=post action='/screener_over/{{id}}'>
+    <div class="login-section">
+        <h2>Requirements</h2>
+        <div class=scrollbar id=style-2>
+            <div class="scrolling">
+1. You need to satisfy these requirements:<br>
+    {{screener1[0][0]}}<br>
+2. You need to have the following browsers: <br>
+    <ul>{% for row in browser %}
+    <li>{{row[0]}}<br></li>
+    {% endfor %} <br>
+    </ul>
+    3. You need to have {{screener1[0][1]}} Operating System.<br>
+    Can you satisfy these requirements?<br>
+    <input type=radio name=reqt_ans value='yes'><label>Yes</label><br>
+    <input type=radio name=reqt_ans value='no'><label>No</label>
+    </div></div></div>
+    <div class="website-intro-section">
+    <h2>Screener Questions</h2>
+    <div class=scrollbar id=style-2>
+        <div class="scrolling">
+   {% for ques in screener2 %}
+   {{ques[0]}}<br><br>
+   {% for q in ques %}
+   {% if q != ques[0] %}
+   {% if q !='NULL' %}
+   <input type='hidden' value="0" name='screener_answers'><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value"><label>{{q}}</label><br>
+   {% else %}
+   <input type='hidden' value="0" name='screener_answers'>
+   {% endif %}
+   {% endif %}
+   
+   {% endfor %}
+   <br>
+   {% endfor %}    
+   <br><br>
+   <button type="submit" style="align-items: center;">Complete Test</button>
+</div></div></div>
+</div>
+
+</form>
+</body>
+</html>

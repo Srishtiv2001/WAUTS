@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/create_audience.css">
+    
+    <title>Create Audience</title>
+</head>
+<body>
+    <script type="text/javascript" scr="C:/Users/srish/WAUTS/js/create_audience.js"></script>
+    <form class='#' method='post' action='/create_new_audience/{{testid}}'>
+    <div class=testname style="margin-bottom:30px;">
+        <label style="font-size:x-large;">Test Name : </label>
+    <input type=text name='test_name' placeholder='Untitled Test' style="width: 50%;height:100%;font-size:150%;border:none"><br>
+    </div>
+    <label style="font-size:x-large; margin-bottom: 25px;">Choose Test Target Audience : </label><br>
+    <!-- <input type="text" class="audience_name" name="audience_title" placeholder="Untitled Audience"><br> -->
+    <div class=scrollbar id=style-2>
+    <div class="scrolling">
+    <br>
+    <label>How many participants do you need? </label>
+    <input type="number" class="audience-input" name="participants" placeholder="Number of participants"></input><br>
+    <br>
+    <label>Which type of device should the participants use?</label><br>
+    <input type="radio" id="computer" name="device" value="computer">
+    <label for="computer">Computer</label><br>
+    <input type="radio" id="tablet" name="device" value="tablet">
+    <label for="tablet">Tablet</label><br>
+    <input type="radio" id="smartphone" name="device" value="smartphone">
+    <label for="smartphone">Smartphone</label><br>
+    <br>
+    <label>Age</label>
+    <!--  -->
+    <div class="middle">
+        <div class="multi-range-slider"><br>
+            <input type="range" id="input-left" name=age_ll min="0" max="100" value="25" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)">
+            <input type="range" id="input-right" name=age_ul min="0" max="100" value="75" onChange="rangeSlide2(this.value)" onmousemove="rangeSlide2(this.value)">
+                     
+            <div class="slider">
+                <div class="track"></div>
+                <div class="range"></div>
+                <div class="thumb left"></div>
+                <div class="thumb right"></div>                
+            </div>
+            <br>
+            <label style="font-size: medium;"> Upper limit :</label><span id="rangeValue1">25</span>
+            <label style="font-size: medium;"> Lower limit :</label><span id="rangeValue2" style="text-align: left;">75</span>
+        </div>        
+    </div>
+      <!-- Example -->
+      <br>
+    <!-- scroll bar -->
+    <label>Household Income</label>
+    <!-- <input type='number' id=income_ll name=income>
+    <input type='number' id=income_ul name=income> -->
+    <div class="middle1">
+        <div class="multi-range-slider1"><br>
+            <input type="range" id="input-left1" name=income_ll min="0" max="100" value="25" onChange="rangeSlide3(this.value)" onmousemove="rangeSlide3(this.value)">
+            <input type="range" id="input-right1" name=income_ul min="0" max="100" value="75" onChange="rangeSlide4(this.value)" onmousemove="rangeSlide4(this.value)">
+                    
+            <div class="slider1">
+                <div class="track1"></div>
+                <div class="range1"></div>
+                <div class="thumb1 left1"></div>
+                <div class="thumb1 right1"></div>                
+            </div>
+            <br>
+            <label style="font-size: medium;"> Upper limit :</label><span id="rangeValue3">25</span>k
+            <label style="font-size: medium;"> Lower limit :</label><span id="rangeValue4" style="text-align: left;">75</span>k
+        </div>        
+    </div>
+    <br>
+    <label>Gender : </label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label> 
+     <br><br>
+    <label>Country : </label><br>
+    <input type="checkbox" id="us" name="country" value="us">
+    <label>United States</label>
+    <input type="checkbox" id="us" name="country" value="uk">
+    <label>United Kingdom</label>
+    <input type="checkbox" id="us" name="country" value="can">
+    <label>Canada</label>
+    <input type="checkbox" id="us" name="country" value="aus">
+    <label>Australia</label>
+    <input type="checkbox" id="us" name="country" value="ind">
+    <label>India</label>
+    <input type="checkbox" id="us" name="country" value="rest">
+    <label>Rest of World</label>
+    <br><br>
+    <label>Web Expertise : </label><br>
+    <input type="radio" id="average" name="web_expertise" value="average">
+    <label for="average">Average web user</label>
+    <input type="radio" id="advanced" name="web_expertise" value="advanced">
+    <label for="advanced">Advanced web user</label>
+    <br><br>
+    <label>Employment Status : </label><br>
+    <input type="checkbox" id="empstat1" name="empstat" value="empstat1">
+    <label for="empstat1"> Employed full-time (30 or more hours per week)</label><br>
+    <input type="checkbox" id="empstat5" name="empstat" value="empstat5">
+    <label for="empstat5"> Employed part-time (Under 30 hours per week)</label><br>
+    <input type="checkbox" id="empstat2" name="empstat" value="empstat2">
+    <label for="empstat2"> Self-employed</label><br>
+    <input type="checkbox" id="empstat6" name="empstat" value="empstat6">
+    <label for="empstat6"> Homemaker/stay-at-home parent</label><br>
+    <input type="checkbox" id="empstat3" name="empstat" value="empstat3">
+    <label for="empstat3"> Full Time Student</label><br>
+    <input type="checkbox" id="empstat4" name="empstat" value="empstat4">
+    <label for="empstat4"> Unable to work/disabled</label>  <br> 
+    <input type="checkbox" id="empstat7" name="empstat" value="empstat7">
+    <label for="empstat7"> Retired</label><br>
+    <input type="checkbox" id="empstat8" name="empstat" value="empstat8">
+    <label for="empstat8"> Not employed, looking for work</label>
+    <br><br>
+    <label>Industry : </label><br>
+    <input type="checkbox" id="indus1" name="indus" value="indus1">
+    <label for="indus1">Advertising/Marketing/PR</label><br>
+    <input type="checkbox" id="indus2" name="indus" value="indus2">
+    <label for="indus2">Airlines, Aerospace and Defense</label><br>
+    <input type="checkbox" id="indus3" name="indus" value="indus3">
+    <label for="indus3">Arts and Design</label><br>
+    <input type="checkbox" id="indus4" name="indus" value="indus4">
+    <label for="indus4">Automotive</label><br>
+    <input type="checkbox" id="indus5" name="indus" value="indus5">
+    <label for="indus5">Broadcast Media/Publishing</label><br>
+    <input type="checkbox" id="indus6" name="indus" value="indus6">
+    <label for="indus6">Business Support & Logistics</label><br>
+    <input type="checkbox" id="indus7" name="indus" value="indus7">
+    <label for="indus7">Construction, Machinery and Homes</label><br>
+    <input type="checkbox" id="indus8" name="indus" value="indus8">
+    <label for="indus8">Education</label><br>
+    <input type="checkbox" id="indus9" name="indus" value="indus9">
+    <label for="indus9">Entertainment, Leisure and travel</label><br>
+    <input type="checkbox" id="indus10" name="indus" value="indus10">
+    <label for="indus10">Finance & Financial Services</label><br>
+    <input type="checkbox" id="indus11" name="indus" value="indus11">
+    <label for="indus11">Food & Beverages</label><br>
+    <input type="checkbox" id="indus12" name="indus" value="indus12">
+    <label for="indus12">Government/Legal/Public safety</label><br>
+    <input type="checkbox" id="indus13" name="indus" value="indus13">
+    <label for="indus13">Health Care & Pharmaceuticals</label><br>
+    <input type="checkbox" id="indus14" name="indus" value="indus14">
+    <label for="indus14">Insurance</label><br>
+    <input type="checkbox" id="indus15" name="indus" value="indus15">
+    <label for="indus15">Manufacturing</label><br>
+    <input type="checkbox" id="indus16" name="indus" value="indus16">
+    <label for="indus16">Nonprofit</label><br>
+    <input type="checkbox" id="indus17" name="indus" value="indus17">
+    <label for="indus17">Retail & Consumer Durables</label><br>
+    <input type="checkbox" id="indus18" name="indus" value="indus18">
+    <label for="indus18">Real Estate</label><br>
+    <input type="checkbox" id="indus19" name="indus" value="indus19">
+    <label for="indus19">Telecommunications, Technology, Internet and Electronics</label><br>
+    <input type="checkbox" id="indus20" name="indus" value="indus20">
+    <label for="indus20">Utilities, Energy, and Extraction</label><br>
+    <input type="checkbox" id="indus21" name="indus" value="indus21">
+    <label for="indus21">Other</label>
+    <br><br>     
+    <label>Company size : </label> <br>
+    <input type="radio" id="comp1" name="comp" value="comp1">
+    <label for="comp1">Small 1-50</label><br> 
+    <input type="radio" id="comp2" name="comp" value="comp2">
+    <label for="comp2">Midsize 51-1000</label><br> 
+    <input type="radio" id="comp3" name="comp" value="comp3">
+    <label for="comp3">Large 1001+</label>
+    <br><br> 
+    <label>Job Role : </label><br>
+    <input type="checkbox" id="job1" name="job" value="job1">
+    <label for="job1">Accounting</label><br> 
+    <input type="checkbox" id="job2" name="job" value="job2">
+    <label for="job2">Administrative</label><br> 
+    <input type="checkbox" id="job3" name="job" value="job3">
+    <label for="job3">Arts and Design</label><br>
+    <input type="checkbox" id="job4" name="job" value="job4">
+    <label for="job4">Business Development</label><br>
+    <input type="checkbox" id="job5" name="job" value="job5">
+    <label for="job5">Community & Social Services</label><br>
+    <input type="checkbox" id="job6" name="job" value="job6">
+    <label for="job6">Consulting</label><br>
+    <input type="checkbox" id="job7" name="job" value="job7">
+    <label for="job7">Education</label><br>
+    <input type="checkbox" id="job8" name="job" value="job8">
+    <label for="job8">Engineering</label><br>
+    <input type="checkbox" id="job9" name="job" value="job9">
+    <label for="job9">Entrepreneurship</label><br>
+    <input type="checkbox" id="job10" name="job" value="job10">
+    <label for="job10">Finance</label><br>
+    <input type="checkbox" id="job11" name="job" value="job11">
+    <label for="job11">Healthcare Services</label><br>
+    <input type="checkbox" id="job12" name="job" value="job12">
+    <label for="job12">Human Resources</label><br>
+    <input type="checkbox" id="job13" name="job" value="job13">
+    <label for="job13">Information Technology</label><br>
+    <input type="checkbox" id="job14" name="job" value="job14">
+    <label for="job14">Legal</label><br>
+    <input type="checkbox" id="job15" name="job" value="job15">
+    <label for="job15">Marketing</label><br>
+    <input type="checkbox" id="job16" name="job" value="job16">
+    <label for="job16">Media & Communications</label><br>
+    <input type="checkbox" id="job17" name="job" value="job17">
+    <label for="job17">Military & Protective Services</label><br>
+    <input type="checkbox" id="job18" name="job" value="job18">
+    <label for="job18">Operations</label><br>
+    <input type="checkbox" id="job19" name="job" value="job19">
+    <label for="job19">Product Management</label><br>
+    <input type="checkbox" id="job20" name="job" value="job20">
+    <label for="job20">Program Management</label><br>
+    <input type="checkbox" id="job21" name="job" value="job21">
+    <label for="job21">Purchasing</label><br>
+    <input type="checkbox" id="job22" name="job" value="job22">
+    <label for="job22">Quality Assurance</label><br>
+    <input type="checkbox" id="job23" name="job" value="job23">
+    <label for="job23">Real Estate</label><br>
+    <input type="checkbox" id="job24" name="job" value="job24">
+    <label for="job24">Research</label><br>
+    <input type="checkbox" id="job25" name="job" value="job25">
+    <label for="job25">Sales</label><br>
+    <input type="checkbox" id="job26" name="job" value="job26">
+    <label for="job26">Support</label>
+    <br><br>
+    <label>Job Level : </label><br>
+    <input type="checkbox" id="joblevel1" name="joblevel" value="joblevel1">
+    <label for="joblevel1">Entry-level</label><br>
+    <input type="checkbox" id="joblevel2" name="joblevel" value="joblevel2">
+    <label for="joblevel2">Senior</label><br>
+    <input type="checkbox" id="joblevel3" name="joblevel" value="joblevel3">
+    <label for="joblevel3">Owner</label><br>
+    <input type="checkbox" id="joblevel4" name="joblevel" value="joblevel4">
+    <label for="joblevel4">Manager</label><br>
+    <input type="checkbox" id="joblevel5" name="joblevel" value="joblevel5">
+    <label for="joblevel5">Director or above</label>
+    <br><br>
+    <label>Language</label><br>
+    <input type="radio" id="english" name="lang" value="english">
+    <label for="english">English</label><br>
+    <input type="radio" id="spanish" name="lang" value="spanish">
+    <label for="spanish">Spanish</label><br>
+    <input type="radio" id="french" name="lang" value="french">
+    <label for="french">French</label><br>
+    <input type="radio" id="german" name="lang" value="german">
+    <label for="german">German</label>
+    <br><br>
+    <label>Parental Status : </label><br>
+    <input type="radio" id="no" name="parental" value="no">
+    <label for="no">No Children</label><br>
+    <input type="radio" id="has" name="parental" value="has">
+    <label for="has">Has Children</label>  <br>
+    <input type="radio" id="both" name="parental" value="both"> 
+    <label for="both">Doesn't matter</label><br>
+    <br>
+    <label>Operating Systems : </label><br>
+    <input type="radio" id="windows" name="OS" value="windows">
+    <label>Windows</label><br>
+    <input type="radio" id="mac" name="OS" value="mac">
+    <label>Mac</label><br>
+    <br>
+    <label>Other Requirements : </label>
+    <input type='text' name='OR'placeholder="Eg.-----">
+    <br><br>
+    <label>Web Browser : </label><br>
+    <input type="checkbox" id="firefox" name="browser" value="firefox">
+    <label>Firefox</label>
+    <input type="checkbox" id="chrome" name="browser" value="chrome">
+    <label>Chrome</label>
+    <input type="checkbox" id="safari" name="browser" value="safari">
+    <label>Safari</label>
+    <input type="checkbox" id="edge" name="browser" value="edge">
+    <label>Edge</label><br>
+    <br>
+<!-- give option to edit -->
+<button type='submit' id='btn'>New test</button>
+</div></div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script >
+var inputLeft = document.getElementById("input-left");
+var inputRight = document.getElementById("input-right");
+
+var thumbLeft = document.querySelector(".slider > .thumb.left");
+var thumbRight = document.querySelector(".slider > .thumb.right");
+var range = document.querySelector(".slider > .range");
+
+function setLeftValue() {
+    var _this = inputLeft,
+        min = parseInt(_this.min),
+        max = parseInt(_this.max);
+
+    _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+    var percent = ((_this.value - min) / (max - min)) * 100;
+
+    thumbLeft.style.left = percent + "%";
+    range.style.left = percent + "%";
+}
+setLeftValue();
+
+function setRightValue() {
+    var _this = inputRight,
+        min = parseInt(_this.min),
+        max = parseInt(_this.max);
+
+    _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+    var percent = ((_this.value - min) / (max - min)) * 100;
+
+    thumbRight.style.right = (100 - percent) + "%";
+    range.style.right = (100 - percent) + "%";
+}
+setRightValue();
+
+inputLeft.addEventListener("input", setLeftValue);
+inputRight.addEventListener("input", setRightValue);
+
+inputLeft.addEventListener("mouseover", function() {
+    thumbLeft.classList.add("hover");
+});
+inputLeft.addEventListener("mouseout", function() {
+    thumbLeft.classList.remove("hover");
+});
+inputLeft.addEventListener("mousedown", function() {
+    thumbLeft.classList.add("active");
+});
+inputLeft.addEventListener("mouseup", function() {
+    thumbLeft.classList.remove("active");
+});
+
+inputRight.addEventListener("mouseover", function() {
+    thumbRight.classList.add("hover");
+});
+inputRight.addEventListener("mouseout", function() {
+    thumbRight.classList.remove("hover");
+});
+inputRight.addEventListener("mousedown", function() {
+    thumbRight.classList.add("active");
+});
+inputRight.addEventListener("mouseup", function() {
+    thumbRight.classList.remove("active");
+});
+
+
+
+
+var inputLeft1 = document.getElementById("input-left1");
+var inputRight1 = document.getElementById("input-right1");
+
+var thumbLeft1 = document.querySelector(".slider1 > .thumb1.left1");
+var thumbRight1 = document.querySelector(".slider1 > .thumb1.right1");
+var range1 = document.querySelector(".slider1 > .range1");
+
+function setLeftValue1() {
+    var _this = inputLeft1,
+        min1 = parseInt(_this.min1),
+        max1 = parseInt(_this.max1);
+
+    _this.value = Math.min(parseInt(_this.value), parseInt(inputRight1.value) - 1);
+
+    var percent1 = ((_this.value - min1) / (max1 - min1)) * 100;
+
+    thumbLeft1.style1.left1 = percent1 + "%";
+    range1.style1.left1 = percent1 + "%";
+}
+setLeftValue1();
+
+function setRightValue1() {
+    var _this = inputRight1,
+        min = parseInt(_this.min),
+        max = parseInt(_this.max);
+
+    _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+    var percent1 = ((_this.value - min) / (max - min)) * 100;
+
+    thumbRight1.style1.right1 = (100 - percent1) + "%";
+    range1.style1.right1 = (100 - percent1) + "%";
+}
+setRightValue1();
+
+inputLeft1.addEventListener("input", setLeftValue1);
+inputRight1.addEventListener("input", setRightValue1);
+
+inputLeft1.addEventListener("mouseover", function() {
+    thumbLeft1.classList.add("hover");
+});
+inputLeft1.addEventListener("mouseout", function() {
+    thumbLeft1.classList.remove("hover");
+});
+inputLeft1.addEventListener("mousedown", function() {
+    thumbLeft1.classList.add("active");
+});
+inputLeft1.addEventListener("mouseup", function() {
+    thumbLeft1.classList.remove("active");
+});
+
+inputRight1.addEventListener("mouseover", function() {
+    thumbRight1.classList.add("hover");
+});
+inputRight1.addEventListener("mouseout", function() {
+    thumbRight1.classList.remove("hover");
+});
+inputRight1.addEventListener("mousedown", function() {
+    thumbRight1.classList.add("active");
+});
+inputRight1.addEventListener("mouseup", function() {
+    thumbRight1.classList.remove("active");
+});
+
+
+function rangeSlide1(value) {
+document.getElementById('rangeValue1').innerHTML = value;
+}
+function rangeSlide2(value) {
+document.getElementById('rangeValue2').innerHTML = value;
+}
+function rangeSlide3(value) {
+document.getElementById('rangeValue3').innerHTML = value;
+}
+function rangeSlide4(value) {
+document.getElementById('rangeValue4').innerHTML = value;
+}
+
+
+</script>
+
+</body>
+</html>

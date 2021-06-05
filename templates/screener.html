@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/screener.css" type="text/css">
+    <title>Screener Questions</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var max_fields      = 10;
+    var wrapper         = $(".container1");
+    var add_button      = $(".add_form_field");
+ 
+    var x = 1;
+    $(add_button).click(function(e){
+        e.preventDefault();
+        if(x < max_fields){
+            x++;
+            $(wrapper).append('<div><label>Question : </label><button href="#" class="delete">Delete</button><br><input type=text name=question placeholder="Enter question"><br><input type=text name=mcq1 placeholder="mcq1"><select name="acc_1"><option value="0">Reject</option><option value="1">Accept</option></select><input type=text name=mcq2 placeholder="mcq2" ><select name="acc_2"><option value="0">Reject</option><option value="1">Accept</option></select><br><input type=text name=mcq3 placeholder="mcq3" value="NULL"><select name="acc_3"><option value="0">Reject</option><option value="1">Accept</option></select><input type=text name=mcq4 placeholder="mcq4" value="NULL"> <select name="acc_4"><option value="0">Reject</option><option value="1">Accept</option></select><br><br></div>');       
+         }
+  else
+  {
+  alert('You Reached the limits')
+  }
+    });
+ 
+    $(wrapper).on("click",".delete", function(e){
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+</script>
+<body>
+    <div class="container">
+    <h2>Screener questions</h2><br>
+    <h4>Instructions :</h4><br>
+    1.You can have a maximum of 10 screener questions and minimum 1 screener question.<br>
+    2.Your question can have a maximum of 4 options and minimum 2 options.<br><br>
+    <h4>Questions : <button class="add_form_field">Add Question &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button></h4>
+    <br>
+    <form method="post" action="/create_screener/{{testid}}">
+        <div class=scrollbar id=style-2>
+            <div class="scrolling">
+                <div class="container1">
+    <div>
+    <label>Question : </label><button href="#" class="delete">Delete</button><br>
+    <input type='text' name='question' placeholder='Enter question'><br>
+    <input type=text name=mcq1 placeholder="mcq1">
+    <select name="acc_1">
+    <option value="0">Reject</option>
+    <option value="1">Accept</option>
+    </select>
+    <input type=text name=mcq2 placeholder="mcq2" >
+    <select name="acc_2">
+    <option value="0">Reject</option>
+    <option value="1">Accept</option>
+    </select>
+    <br>
+    <input type=text name=mcq3 placeholder="mcq3" value="NULL">
+    <select name="acc_3">
+    <option value="0">Reject</option>
+    <option value="1">Accept</option>
+    </select>
+    <input type=text name=mcq4 placeholder="mcq4" value="NULL"> 
+    <select name="acc_4">
+    <option value="0">Reject</option>
+    <option value="1">Accept</option>
+    </select>   
+    <br><br>
+</div>
+    </div></div>
+    </div>
+    <button type=submit>Submit Test Questions</button>
+</div>
+
+</form>
+</body>
+</html>

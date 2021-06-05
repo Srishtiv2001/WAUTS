@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="C:/Users/srish/WAUTS/static/css/dashboard_testmaker.css"> -->
+    <link rel="stylesheet" href="../static/css/dashboard_testmaker.css" type="text/css"> 
+    <title>Dashboard Maker</title>
+</head>
+<style>
+  
+</style>
+<body style="  background-image: url('../static/img/desk4.jpg') !important;">
+  <div class=container>
+    <form method="post">
+        
+  <div class="container-heading">Dashboard
+    <button type='submit' formaction='/create_audience/{{userid}}' style="margin-left: 100px; background-color:blue ;">New test</button>
+    <button type='submit' formaction="/logout_tm" style="margin-left: 100px; background-color:green ;">Logout</button>
+  </div>
+    </form>
+    <h2>Test Name</h2><br>
+    <div class=scrollbar id=style-2>
+      <div class="scrolling">
+    <form method=post>
+    <table> 
+            {% for row in data %}  
+                <tr> 
+                    <td>{{row[2]}}</td> 
+                    <td style="text-align: right;">
+                      <!-- <button type='submit' formaction="/edittest/{{row[1]}}" style="padding-left:15px;padding-right:15px;">Edit</button>
+                    <button type='submit' formaction='/deletetest/{{row[1]}}'>Delete</button> -->
+                    <button type='submit' formaction='/result/{{row[1]}}'>Results</button></td>
+                </tr> 
+            {% endfor %} 
+
+    </table> 
+    <!-- next to name make a drop box to edit, delete test -->
+  </form>
+  </div></div>
+</div>
+</div>
+</body>
+</html>

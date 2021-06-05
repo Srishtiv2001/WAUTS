@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel=stylesheet href="C:/Users/srish/WAUTS/static/css/result.css"> -->
+    <link rel="stylesheet" href="../static/css/result.css"  type="text/css">
+    <title>Results Page</title>
+</head>
+<!--  pass task name, task no, result for success and difficulty -->
+<body>
+    <div class="container-heading">Results</div>
+    <div class=scrollbar id=style-2>
+    <div class="scrolling">    
+    {% for res in result %}
+    <div class=task style="  font-family: 'Roboto Mono', monospace;font: 'Roboto Mono'; color: white; font-size: large; font-weight: 400;">{{res[0]}} {{res[1]}}</div>
+    <div class="left">    
+    <div class="heading-left" style=" font-family: 'Roboto Mono', monospace;font: 'Roboto Mono'; color: white;font-size: large;">Success : </div>
+    <br>
+    <div class="left-left">
+      <div class="chart" style="background: conic-gradient(#f15854 {{res[2]}}%, green {{res[2]}}% {{res[2]+res[3]}}%,#4d4d4d {{res[2]+res[3]}}% {{res[2]+res[3]+res[4]}}%, #5da5da {{res[2]+res[3]+res[4]}}% {{res[2]+res[3]+res[4]+res[5]}}%, #decf3f {{res[2]+res[3]+res[4]+res[5]}}% {{res[2]+res[3]+res[4]+res[5]+res[6]}}%, #b276b2 {{res[2]+res[3]+res[4]+res[5]+res[6]}}% {{res[2]+res[3]+res[4]+res[5]+res[6]+res[7]}}%, orange 0 );"></div>
+  
+    <!-- <div class="chart" style="background: conic-gradient(#f15854 {{res[2]*1.8}}deg, green {{res[2]*1.8}}deg {{(res[2]+res[3])*1.8}}deg,#4d4d4d {{(res[2]+res[3])*1.8}}deg {{(res[2]+res[3]+res[4])*1.8}}deg, #5da5da {{(res[2]+res[3]+res[4])*1.8}}deg {{(res[2]+res[3]+res[4]+res[5])*1.8}}deg, #decf3f {{(res[2]+res[3]+res[4]+res[5])*1.8}}deg {{(res[2]+res[3]+res[4]+res[5]+res[6])*1.8}}deg, #b276b2 {{(res[2]+res[3]+res[4]+res[5]+res[6])*1.8}}deg {{(res[2]+res[3]+res[4]+res[5]+res[6]+res[7])*1.8}}deg, orange 0 );"></div> -->
+    <!-- <br> -->
+  </div>
+  <div class="left-right">
+    <div class="piechart">
+      <ul class="key">
+          <li>
+            <strong class="percent red">{{res[2]}}%</strong>
+            <span class="choice">Yes, I'm sure I completed the entire task successfully</span>
+          </li>
+          <li>
+            <strong class="percent green">{{res[3]}}%</strong>
+            <span class="choice">No, I'm not sure if I completed the entire task successfully.</span>
+          </li>
+          <li>
+              
+            <strong class="percent gray">{{res[4]}}%</strong>
+            <span class="choice">No, The task took too long that i gave up.</span>
+          </li>
+          <li>
+            <strong class="percent blue">{{res[5]}}%</strong>
+            <span class="choice">No, The site's information or navigation was poor.</span>
+          </li>
+          <li>
+            <strong class="percent yellow">{{res[6]}}%</strong>
+            <span class="choice">No, I encountered an error or a bug.</span>
+          </li>
+          <li>
+            <strong class="percent purple">{{res[7]}}%</strong>
+            <span class="choice">No,I was confused by the task instructions</span>
+          </li>
+          <li>              
+            <strong class="percent orange">{{res[8]}}%</strong>
+            <span class="choice">No, Other Reasons.</span>
+          </li>
+        </ul></div>
+        <br><br><br>
+      </div>
+      <br><br><br>
+  </div>
+  <div class="right">
+    <div class="heading-left" style=" font-family: 'Roboto Mono', monospace;font: 'Roboto Mono'; color: white;font-size: large;">Difficulty : </div>
+    <br>
+    <div class="barchart">
+      <div class="igFrameBar">      
+          <div class="igData igData1" href={{res[9]}} style="--c: {{res[9]}}%;"></div>
+          <div class="igData igData2" href={{res[10]}} style="--c: {{res[10]}}%;"></div>
+          <div class="igData igData3" href={{res[11]}} style="--c: {{res[11]}}%;"></div>
+          <div class="igData igData4" href={{res[12]}} style="--c: {{res[12]}}%;"></div>
+          <div class="igData igData5" href={{res[13]}} style="--c: {{res[13]}}%;"></div>
+          <div class="igData igData6" href={{res[14]}} style="--c: {{res[14]}}%;"></div>
+          <div class="igData igData7" href={{res[15]}} style="--c: {{res[15]}}%;"></div>
+          <div class="igData igData8" href={{res[16]}} style="--c: {{res[16]}}%;"></div>
+          <div class="igData igData9" href={{res[17]}} style="--c: {{res[17]}}%;"></div>
+          <div class="igData igData10" href={{res[18]}} style="--c: {{res[18]}}%;"></div>    
+        </div>
+        
+  </div>
+  <br><br><br>
+    </div>
+ 
+    {% endfor %}
+    </div>
+    </div>
+</body>
+</html>

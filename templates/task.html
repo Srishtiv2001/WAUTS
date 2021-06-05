@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/task.css" type="text/css">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var max_fields      = 10;
+    var wrapper         = $(".container1");
+    var add_button      = $(".add_form_field");
+ 
+    var x = 1;
+    $(add_button).click(function(e){
+        e.preventDefault();
+        if(x < max_fields){
+            x++;
+            $(wrapper).append('<div><input type="text" name="task"/><button href="#" class="delete">Delete Task</button></div>'); //add input box
+        }
+  else
+  {
+  alert('You Reached the limits')
+  }
+    });
+ 
+    $(wrapper).on("click",".delete", function(e){
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+</script>
+<body>
+    <div class="container">
+
+    <form class=form method='post' action="/added_tasks/{{testid}}">
+        <ol>
+            <h2>Tasks</h2><br>
+            <h4>Instructions :</h4><br>
+            1.You give a maximum of 20 tasks and minimum 1 task.<br><br>
+            <h4>Tasks :  <button class="add_form_field">Add New Field &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                <div class=scrollbar id=style-2>
+                    <div class="scrolling">
+                <div class="container1">
+                <div><input type="text" name="task"></div>
+        </div>  
+    </div></ol></div></div>
+        <button type=submit >Create Test</button>
+    </form>
+</body>
+</html>

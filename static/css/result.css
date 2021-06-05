@@ -1,0 +1,344 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Noto+Serif:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto&family=Roboto+Mono:wght@400;500&family=Roboto+Slab&display=swap');
+
+* { 
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url('C:/Users/srish/WAUTS/static/img/desk4.jpg') !important; */
+  background-image: url('../img/desk11.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  padding-top: 1.75%;
+  padding-bottom: 1%;
+  padding-right: 1%;
+  padding-left: 4%;
+
+}
+.left
+{
+  padding:3%;
+  width:50%;
+  height:300px;
+  float:left;
+margin-bottom: 30%;
+}
+.left-left
+{
+  width:50%;height:100%;
+  float:left;
+}
+.left-right
+{
+  width:50%;height:100%;
+  float:right;
+}
+.right
+{
+  padding:3%;
+  width:50%;
+  height:300px;
+  margin-bottom: 30%;
+  float:right;  
+}
+.piechart{
+    width: 80%;
+    height: 100%;
+    padding-top:3%;
+    padding-left: 4%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+  }
+  .container-heading
+  {
+      font-family: "Limelight";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 200%;
+      color: white !important;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 3%;
+      position:relative;
+  }
+  
+.scrollbar
+{
+  overflow: auto;
+  height:460px;
+  overflow-x: hidden; 
+
+}
+.scrolling
+{
+ 
+  min-height: 90px;
+}
+
+#style-2::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: none;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: none;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+/* .barchart
+{
+  width:100%;
+  height: 100%;
+} */
+.igFrameBar {
+    width: 400px;
+    height:360px;
+    padding-top: 10px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.212);  
+    margin-right: 50px;
+    float:right;
+  }
+  
+  .igData {
+    width: 20px;
+    position: absolute;
+    bottom: 1px;
+    margin: 0px 0px 0px 0px;
+    z-index: 99;
+    /* float: left; */
+  }
+  
+  .igData1 {
+    background: #9baec8;
+  
+    height: var(--c);
+    left: 26.3636363636px;
+  }
+  
+  .igData2 {
+    background: #d9e1e8;
+    height: var(--c);
+    left: 62.7272727273px;
+  }
+  
+  .igData3 {
+    background: #2b90d9;
+    height: var(--c);
+    left: 99.0909090909px;
+  
+  }
+  
+  .igData4 {
+    background: #8ec0e4;
+    height: var(--c);
+    left: 135.4545454545px;
+  }
+  
+  .igData5 {
+    background: #cadbe9;
+    height: var(--c);
+    left: 171.8181818182px;
+  }
+  
+  .igData6 {
+    background: #6aafe6;
+    height: var(--c);
+    left: 208.1818181818px;
+  }
+  
+  .igData7 {
+    background: #d6ecfa;
+    height: var(--c);
+    left: 244.5454545455px;
+  }
+  
+  .igData8 {
+    background: #a5dff9;
+    height: var(--c);
+    left: 280.9090909091px;
+  
+  }
+  
+  .igData9 {
+    background: #dae9f4;
+    height: var(--c);
+    left: 317.2727272727px;
+  }
+  
+  .igData10 {
+    background: #d3e0f7;
+    height: var(--c);
+    left: 353.6363636364px;
+  }
+  
+  .igData:before {
+    position: absolute;
+    top: -16px;
+    font-size: 12px;
+    color: white;
+    font-family: "roboto";
+    font-weight: 300;
+  }
+  
+  .igData1:before {
+    content: attr(href) "%";
+  }
+  
+  .igData2:before {
+    content: attr(href) "%";
+  }
+  
+  .igData3:before {
+    content: attr(href) "%";
+  }
+  
+  .igData4:before {
+    content: attr(href) "%";
+  }
+  
+  .igData5:before {
+    content: attr(href) "%";
+  }
+  
+  .igData6:before {
+    content: attr(href) "%";
+  }
+  
+  .igData7:before {
+    content: attr(href) "%";
+  }
+  
+  .igData8:before {
+    content: attr(href) "%";
+  }
+  
+  .igData9:before {
+    content: attr(href) "%";
+  }
+  
+  .igData10:before {
+    content: attr(href) "%";
+  }
+  
+  .igData:after {
+    position: absolute;
+    bottom: -20px;
+    /* transform: rotate(30deg); */
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    font-family: "roboto";
+    font-weight: 300;
+    width: 150px;
+  }
+  
+  .igData1:after {
+    content: "1";
+  }
+  
+  .igData2:after {
+    content: "2";
+  }
+  
+  .igData3:after {
+    content: "3";
+  }
+  
+  .igData4:after {
+    content: "4";
+  }
+  
+  .igData5:after {
+    content: "5";
+  }
+  
+  .igData6:after {
+    content: "6";
+  }
+  
+  .igData7:after {
+    content: "7";
+  }
+  
+  .igData8:after {
+    content: "8";
+  }
+  
+  .igData9:after {
+    content: "9";
+  }
+  
+  .igData10:after {
+    content: "10";
+  }
+
+  .key {
+    width: 150%;
+    /* float: right; */
+    list-style: none;
+    display: table;
+    border-collapse: separate;
+  }
+  .key > li {
+    display: table-row;
+  }
+  .key > li > * {
+    display: table-cell;
+    border-bottom: 2px solid transparent;
+  }
+  .percent {
+    color: #fff;
+    padding: 10px 2px;
+    text-shadow: 0 0 1px #000;
+    text-align: center;
+  }
+  .choice {
+    padding-left: 10px;
+  }
+  .red {
+    background: #f15854;
+  }
+  .gray {
+    background: #4d4d4d;
+  }
+  .blue {
+    background: #5da5da;
+  }
+  .yellow {
+    background: #decf3f;
+  }
+  .purple {
+    background: #b276b2;
+  }
+  .orange {
+    background: orange;
+  }
+  .green {
+    background: green;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .chart {
+    border-radius: 50%;
+    width: 250px; 
+    /* width should be same as height */
+    height: 250px;
+    padding-top: 20%;
+    float: left;
+    padding-right: 20px;
+  }

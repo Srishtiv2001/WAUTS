@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="static/css/login2.css" type="text/css">
+    <!-- <link rel="stylesheet" href='C:/Users/srish/WAUTS/static/css/login2.css'> -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <div class="login-heading">
+                <h1>Login</h1>
+            </div>
+            <form class="form" method="post" action="/login_validation">
+            <div class="login-info">
+                <div class="login-item">
+                <input type="email" class="login_input" name="login_email" placeholder="Email Address">
+                </div>
+                <div class="login-item">
+                <input type="password" class="login_input" name="login_password" placeholder="Password" >
+                </div>            
+                <div class="login-item" style="text-align: center;">
+                   <!-- <div class="a">Forgot Password?</div> -->
+                   <div class="login-btn">
+                    <button style="align-items: center;" type="submit" >Login</button>
+                    </div>
+                </div>
+            </form>
+                <div class="login-item">
+                    <div class="a" style="text-align: center;font-weight:400; margin-top: 30px;">Or Continue Using</div>
+                    <img src="static/img/Google.svg" alt="Google" style="margin-left: 80px;"></img>
+                    <img src="static/img/Outlook.svg" alt="Outlook"></img>
+                    <div class="a" style="text-align: center;font-weight:400; margin-top: 15px;">Do not have an account?<br><a style="color:antiquewhite" href='/choice'>Sign Up</a></div>
+                 </div>
+            </div>
+        </div>
+        <div class="website-intro-section">
+            <div class="intro-heading" >WAUTS</div>
+            <div class="intro-para">Understand what users feel about your website</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
